@@ -8,8 +8,8 @@
     <ProjectGuid>{797A400B-4B64-4014-9421-53B72D41756A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Simple.Data</RootNamespace>
-    <AssemblyName>Simple.Data</AssemblyName>
+    <RootNamespace>SimpleData</RootNamespace>
+    <AssemblyName>SimpleData</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\MicroORMs\</SolutionDir>
@@ -60,7 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="SimpleDataTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
