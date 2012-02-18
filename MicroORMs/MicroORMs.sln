@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Massive", "Massive\Massive.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleData", "Simple.Data\SimpleData.csproj", "{797A400B-4B64-4014-9421-53B72D41756A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper", "Dapper\Dapper.csproj", "{B1EE2AEF-A7B9-4F47-9580-4242CE2554FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperX", "Dapper\DapperX.csproj", "{B1EE2AEF-A7B9-4F47-9580-4242CE2554FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceStackOrmLite", "ServiceStack.OrmLite\ServiceStackOrmLite.csproj", "{D55EFC63-D3FB-4F8F-B4E9-1E41823D0789}"
 EndProject
