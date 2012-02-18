@@ -4,7 +4,7 @@
 // 
 // The following connection settings were used to generate this file
 // 
-//     Connection String Name: `Nathan`
+//     Connection String Name: `Chinook`
 //     Provider:               `System.Data.SqlClient`
 //     Connection String:      `Data Source=.;Initial Catalog=Chinook;Integrated Security=SSPI;`
 //     Schema:                 ``
@@ -16,17 +16,17 @@ using System.Linq;
 using System.Web;
 using PetaPoco;
 
-namespace Nathan
+namespace Chinook
 {
-	public partial class NathanDB : Database
+	public partial class ChinookDB : Database
 	{
-		public NathanDB() 
-			: base("Nathan")
+		public ChinookDB() 
+			: base("Chinook")
 		{
 			CommonConstruct();
 		}
 
-		public NathanDB(string connectionStringName) 
+		public ChinookDB(string connectionStringName) 
 			: base(connectionStringName)
 		{
 			CommonConstruct();
@@ -36,11 +36,11 @@ namespace Nathan
 		
 		public interface IFactory
 		{
-			NathanDB GetInstance();
+			ChinookDB GetInstance();
 		}
 		
 		public static IFactory Factory { get; set; }
-        public static NathanDB GetInstance()
+        public static ChinookDB GetInstance()
         {
 			if (_instance!=null)
 				return _instance;
@@ -48,10 +48,10 @@ namespace Nathan
 			if (Factory!=null)
 				return Factory.GetInstance();
 			else
-				return new NathanDB();
+				return new ChinookDB();
         }
 
-		[ThreadStatic] static NathanDB _instance;
+		[ThreadStatic] static ChinookDB _instance;
 		
 		public override void OnBeginTransaction()
 		{
@@ -67,7 +67,7 @@ namespace Nathan
         
 		public class Record<T> where T:new()
 		{
-			public static NathanDB repo { get { return NathanDB.GetInstance(); } }
+			public static ChinookDB repo { get { return ChinookDB.GetInstance(); } }
 			public bool IsNew() { return repo.IsNew(this); }
 			public object Insert() { return repo.Insert(this); }
 			public int Update(IEnumerable<string> columns) { return repo.Update(this, columns); }
@@ -133,7 +133,7 @@ namespace Nathan
 	[TableName("Customer")]
 	[PrimaryKey("CustomerId")]
 	[ExplicitColumns]
-    public partial class Customer : NathanDB.Record<Customer>  
+    public partial class Customer : ChinookDB.Record<Customer>  
     {
         [Column] 
 		public int CustomerId 
@@ -335,7 +335,7 @@ namespace Nathan
 	[TableName("Employee")]
 	[PrimaryKey("EmployeeId")]
 	[ExplicitColumns]
-    public partial class Employee : NathanDB.Record<Employee>  
+    public partial class Employee : ChinookDB.Record<Employee>  
     {
         [Column] 
 		public int EmployeeId 
@@ -567,7 +567,7 @@ namespace Nathan
 	[TableName("Genre")]
 	[PrimaryKey("GenreId")]
 	[ExplicitColumns]
-    public partial class Genre : NathanDB.Record<Genre>  
+    public partial class Genre : ChinookDB.Record<Genre>  
     {
         [Column] 
 		public int GenreId 
@@ -604,7 +604,7 @@ namespace Nathan
 	[TableName("Invoice")]
 	[PrimaryKey("InvoiceId")]
 	[ExplicitColumns]
-    public partial class Invoice : NathanDB.Record<Invoice>  
+    public partial class Invoice : ChinookDB.Record<Invoice>  
     {
         [Column] 
 		public int InvoiceId 
@@ -746,7 +746,7 @@ namespace Nathan
 	[TableName("InvoiceLine")]
 	[PrimaryKey("InvoiceLineId")]
 	[ExplicitColumns]
-    public partial class InvoiceLine : NathanDB.Record<InvoiceLine>  
+    public partial class InvoiceLine : ChinookDB.Record<InvoiceLine>  
     {
         [Column] 
 		public int InvoiceLineId 
@@ -828,7 +828,7 @@ namespace Nathan
 	[TableName("MediaType")]
 	[PrimaryKey("MediaTypeId")]
 	[ExplicitColumns]
-    public partial class MediaType : NathanDB.Record<MediaType>  
+    public partial class MediaType : ChinookDB.Record<MediaType>  
     {
         [Column] 
 		public int MediaTypeId 
@@ -865,7 +865,7 @@ namespace Nathan
 	[TableName("Playlist")]
 	[PrimaryKey("PlaylistId")]
 	[ExplicitColumns]
-    public partial class Playlist : NathanDB.Record<Playlist>  
+    public partial class Playlist : ChinookDB.Record<Playlist>  
     {
         [Column] 
 		public int PlaylistId 
@@ -901,7 +901,7 @@ namespace Nathan
     
 	[TableName("PlaylistTrack")]
 	[ExplicitColumns]
-    public partial class PlaylistTrack : NathanDB.Record<PlaylistTrack>  
+    public partial class PlaylistTrack : ChinookDB.Record<PlaylistTrack>  
     {
         [Column] 
 		public int PlaylistId 
@@ -938,7 +938,7 @@ namespace Nathan
 	[TableName("Track")]
 	[PrimaryKey("TrackId")]
 	[ExplicitColumns]
-    public partial class Track : NathanDB.Record<Track>  
+    public partial class Track : ChinookDB.Record<Track>  
     {
         [Column] 
 		public int TrackId 
@@ -1080,7 +1080,7 @@ namespace Nathan
 	[TableName("Album")]
 	[PrimaryKey("AlbumId")]
 	[ExplicitColumns]
-    public partial class Album : NathanDB.Record<Album>  
+    public partial class Album : ChinookDB.Record<Album>  
     {
         [Column] 
 		public int AlbumId 
@@ -1132,7 +1132,7 @@ namespace Nathan
 	[TableName("Artist")]
 	[PrimaryKey("ArtistId")]
 	[ExplicitColumns]
-    public partial class Artist : NathanDB.Record<Artist>  
+    public partial class Artist : ChinookDB.Record<Artist>  
     {
         [Column] 
 		public int ArtistId 
