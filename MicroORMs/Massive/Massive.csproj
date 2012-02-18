@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Massive.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="MassiveTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
