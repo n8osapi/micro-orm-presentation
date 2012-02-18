@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleData", "Simple.Data\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper", "Dapper\Dapper.csproj", "{B1EE2AEF-A7B9-4F47-9580-4242CE2554FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceStack.OrmLite", "ServiceStack.OrmLite\ServiceStack.OrmLite.csproj", "{D55EFC63-D3FB-4F8F-B4E9-1E41823D0789}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceStackOrmLite", "ServiceStack.OrmLite\ServiceStackOrmLite.csproj", "{D55EFC63-D3FB-4F8F-B4E9-1E41823D0789}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D3B742E4-5CB4-4B12-AFF9-FBEAEC6075F0}"
 	ProjectSection(SolutionItems) = preProject

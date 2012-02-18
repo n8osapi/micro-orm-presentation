@@ -25,6 +25,7 @@ namespace Simple.Data
             var db = Database.Open();
             var artistsPage1 = db.Artist.All().Skip(0).Take(5);
             var artistsPage2 = db.Artist.All().Skip(5).Take(5);
+
             foreach (var artist in artistsPage1) { };
             foreach (var artist in artistsPage2) { };
         }

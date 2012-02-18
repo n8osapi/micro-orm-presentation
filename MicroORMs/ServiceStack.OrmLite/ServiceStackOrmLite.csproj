@@ -8,8 +8,8 @@
     <ProjectGuid>{D55EFC63-D3FB-4F8F-B4E9-1E41823D0789}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ServiceStack.OrmLite</RootNamespace>
-    <AssemblyName>ServiceStack.OrmLite</AssemblyName>
+    <RootNamespace>ServiceStackOrmLite</RootNamespace>
+    <AssemblyName>ServiceStackOrmLite</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\MicroORMs\</SolutionDir>
@@ -58,6 +58,7 @@
       <HintPath>..\packages\ServiceStack.Text.3.5.2\lib\net35\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -66,7 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="OrmLiteTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
