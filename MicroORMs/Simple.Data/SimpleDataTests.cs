@@ -14,20 +14,29 @@ namespace Simple.Data
         [Test]
         public void BasicSelect()
         {
-            var db = Database.Open();
-            var artists = db.Artist.All();
-            foreach (var artist in artists) { };
+            dynamic db = Database.Open();
+            dynamic artists = db.Artist.All();
+            foreach (dynamic artist in artists) { };
+
+            Assert.That(artists.Count(), Is.GreaterThan(298));
         }
 
         [Test]
         public void BasicPaging()
         {
-            var db = Database.Open();
-            var artistsPage1 = db.Artist.All().Skip(0).Take(5);
-            var artistsPage2 = db.Artist.All().Skip(5).Take(5);
+            dynamic db = Database.Open();
+            dynamic artistsPage1 = db.Artist.All().Skip(0).Take(5);
+            dynamic artistsPage2 = db.Artist.All().Skip(5).Take(5);
 
-            foreach (var artist in artistsPage1) { };
-            foreach (var artist in artistsPage2) { };
+            foreach (dynamic artist in artistsPage1) { };
+            foreach (dynamic artist in artistsPage2) { };
+
+            var page1 = artistsPage1.ToList();
+
+            Assert.That(artistsPage1.ToList().Count, Is.EqualTo(5));
+            Assert.That(artistsPage2.ToList().Count, Is.EqualTo(5));
+            Assert.That(artistsPage1.ToList()[0].ArtistId, Is.EqualTo(1));
+            Assert.That(artistsPage2.ToList()[0].ArtistId, Is.EqualTo(6));
         }
     }
 }

@@ -8,7 +8,7 @@
 //     Provider:               `System.Data.SqlClient`
 //     Connection String:      `Data Source=.;Initial Catalog=Chinook;Integrated Security=SSPI;`
 //     Schema:                 ``
-//     Include Views:          `False`
+//     Include Views:          `True`
 
 using System;
 using System.Collections.Generic;
@@ -939,6 +939,259 @@ namespace Chinook
 	[PrimaryKey("TrackId")]
 	[ExplicitColumns]
     public partial class Track : ChinookDB.Record<Track>  
+    {
+        [Column] 
+		public int TrackId 
+		{ 
+			get
+			{
+				return _TrackId;
+			}
+			set
+			{
+				_TrackId = value;
+				MarkColumnModified("TrackId");
+			}
+		}
+		int _TrackId;
+
+        [Column] 
+		public string Name 
+		{ 
+			get
+			{
+				return _Name;
+			}
+			set
+			{
+				_Name = value;
+				MarkColumnModified("Name");
+			}
+		}
+		string _Name;
+
+        [Column] 
+		public int? AlbumId 
+		{ 
+			get
+			{
+				return _AlbumId;
+			}
+			set
+			{
+				_AlbumId = value;
+				MarkColumnModified("AlbumId");
+			}
+		}
+		int? _AlbumId;
+
+        [Column] 
+		public int MediaTypeId 
+		{ 
+			get
+			{
+				return _MediaTypeId;
+			}
+			set
+			{
+				_MediaTypeId = value;
+				MarkColumnModified("MediaTypeId");
+			}
+		}
+		int _MediaTypeId;
+
+        [Column] 
+		public int? GenreId 
+		{ 
+			get
+			{
+				return _GenreId;
+			}
+			set
+			{
+				_GenreId = value;
+				MarkColumnModified("GenreId");
+			}
+		}
+		int? _GenreId;
+
+        [Column] 
+		public string Composer 
+		{ 
+			get
+			{
+				return _Composer;
+			}
+			set
+			{
+				_Composer = value;
+				MarkColumnModified("Composer");
+			}
+		}
+		string _Composer;
+
+        [Column] 
+		public int Milliseconds 
+		{ 
+			get
+			{
+				return _Milliseconds;
+			}
+			set
+			{
+				_Milliseconds = value;
+				MarkColumnModified("Milliseconds");
+			}
+		}
+		int _Milliseconds;
+
+        [Column] 
+		public int? Bytes 
+		{ 
+			get
+			{
+				return _Bytes;
+			}
+			set
+			{
+				_Bytes = value;
+				MarkColumnModified("Bytes");
+			}
+		}
+		int? _Bytes;
+
+        [Column] 
+		public decimal UnitPrice 
+		{ 
+			get
+			{
+				return _UnitPrice;
+			}
+			set
+			{
+				_UnitPrice = value;
+				MarkColumnModified("UnitPrice");
+			}
+		}
+		decimal _UnitPrice;
+
+	}
+    
+	[TableName("Address")]
+	[PrimaryKey("ShipperID")]
+	[ExplicitColumns]
+    public partial class Address : ChinookDB.Record<Address>  
+    {
+        [Column] 
+		public int ShipperID 
+		{ 
+			get
+			{
+				return _ShipperID;
+			}
+			set
+			{
+				_ShipperID = value;
+				MarkColumnModified("ShipperID");
+			}
+		}
+		int _ShipperID;
+
+        [Column] 
+		public string Line1 
+		{ 
+			get
+			{
+				return _Line1;
+			}
+			set
+			{
+				_Line1 = value;
+				MarkColumnModified("Line1");
+			}
+		}
+		string _Line1;
+
+        [Column] 
+		public string Line2 
+		{ 
+			get
+			{
+				return _Line2;
+			}
+			set
+			{
+				_Line2 = value;
+				MarkColumnModified("Line2");
+			}
+		}
+		string _Line2;
+
+        [Column] 
+		public string ZipCode 
+		{ 
+			get
+			{
+				return _ZipCode;
+			}
+			set
+			{
+				_ZipCode = value;
+				MarkColumnModified("ZipCode");
+			}
+		}
+		string _ZipCode;
+
+        [Column] 
+		public string State 
+		{ 
+			get
+			{
+				return _State;
+			}
+			set
+			{
+				_State = value;
+				MarkColumnModified("State");
+			}
+		}
+		string _State;
+
+        [Column] 
+		public string City 
+		{ 
+			get
+			{
+				return _City;
+			}
+			set
+			{
+				_City = value;
+				MarkColumnModified("City");
+			}
+		}
+		string _City;
+
+        [Column] 
+		public string Country 
+		{ 
+			get
+			{
+				return _Country;
+			}
+			set
+			{
+				_Country = value;
+				MarkColumnModified("Country");
+			}
+		}
+		string _Country;
+
+	}
+    
+	[TableName("vIAmAView")]
+	[ExplicitColumns]
+    public partial class vIAmAView : ChinookDB.Record<vIAmAView>  
     {
         [Column] 
 		public int TrackId 

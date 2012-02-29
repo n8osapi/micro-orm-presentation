@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Chinook.Partials.cs" />
+    <Compile Include="Models\PetaPocoRelationExtensions.cs" />
     <Compile Include="PetaPocoTests.cs" />
     <Compile Include="Models\Generated\Database.cs">
       <AutoGen>True</AutoGen>
@@ -62,7 +64,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Models\Generated\Database.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Database.cs</LastGenOutput>

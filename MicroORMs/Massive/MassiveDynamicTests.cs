@@ -8,10 +8,8 @@ using NUnit.Framework;
 namespace Massive
 {
 
-
-
     [TestFixture]
-    public class MassiveTests
+    public class MassiveDynamicTests
     {
         [Test]
         public void BasicSelect()
@@ -27,5 +25,6 @@ namespace Massive
             dynamic artistsPage2 = artists.Paged(currentPage: 2, pageSize: 5);
             foreach( dynamic item in artistsPage2.Items) {};
         }
+
     }
 }
